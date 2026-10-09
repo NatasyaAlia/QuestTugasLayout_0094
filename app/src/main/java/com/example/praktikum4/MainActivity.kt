@@ -28,8 +28,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// INI ADALAH KODE DARI LANGKAH 15
-// Kita membuat kerangka halaman utamanya di sini (di luar class MainActivity)
+
 @Composable
 fun MainScreenLayout() {
     Column(modifier = Modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
