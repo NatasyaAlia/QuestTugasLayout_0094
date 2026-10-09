@@ -35,5 +35,7 @@ fun MainScreenLayout() {
     Column(modifier = Modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(text = stringResource(id = R.string.header_title), fontWeight = FontWeight.Bold, fontSize = 24.sp, color = Color.Black)
         Text(text = stringResource(id = R.string.header_subtitle), fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(bottom = 24.dp))
+
+        UserCardWidget(nameResId = R.string.name_1, phoneResId = null, addressResId = R.string.address_1, bgColorResId = R.color.card_gray)
     }
 }
