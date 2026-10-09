@@ -32,11 +32,8 @@ class MainActivity : ComponentActivity() {
 // Kita membuat kerangka halaman utamanya di sini (di luar class MainActivity)
 @Composable
 fun MainScreenLayout() {
-    Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Nanti teks header dan kartu-kartu akan dimasukkan ke dalam sini
-        // (yang akan kita lakukan di Langkah 16 sampai 20)
+    Column(modifier = Modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(text = stringResource(id = R.string.header_title), fontWeight = FontWeight.Bold, fontSize = 24.sp, color = Color.Black)
+        Text(text = stringResource(id = R.string.header_subtitle), fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(bottom = 24.dp))
     }
 }
