@@ -27,6 +27,7 @@ fun UserCardWidget(nameResId: Int, phoneResId: Int?, addressResId: Int, bgColorR
                 if (phoneResId != null) {
                     Text(text = stringResource(id = phoneResId), color = Color.Cyan, fontSize = 14.sp)
                 }
+                Text(text = stringResource(id = addressResId), color = Color.White, fontSize = 14.sp)
             }
         }
     }
