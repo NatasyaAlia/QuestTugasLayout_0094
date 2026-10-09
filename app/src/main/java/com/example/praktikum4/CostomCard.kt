@@ -20,14 +20,13 @@ fun UserCardWidget(nameResId: Int, phoneResId: Int?, addressResId: Int, bgColorR
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = colorResource(id = bgColorResId))
     ) {
-        Row(
-            modifier = Modifier.padding(16.dp).fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
+        Row(modifier = Modifier.padding(16.dp).fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
             Image(painter = painterResource(id = R.drawable.logo_umy), contentDescription = "Logo Kiri", modifier = Modifier.size(50.dp))
             Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.weight(1f)) {
                 Text(text = stringResource(id = nameResId), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                if (phoneResId != null) {
+                    Text(text = stringResource(id = phoneResId), color = Color.Cyan, fontSize = 14.sp)
+                }
             }
         }
     }
